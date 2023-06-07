@@ -1,0 +1,205 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./dist/output.css" rel="stylesheet">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+
+<body  class="font-roboto text-slate-800">
+    <nav x-data="{isNavBarOpen:false, atTop:true}" @scroll.window="atTop=window.pageYOffset>20?false:true" 
+        :class="atTop?'':'bg-white drop-shadow'"
+        class=" p-4 space-y-2 fixed top-0 w-full">
+
+
+        <!-- flex__container -->
+        <div class="flex  md:mx-auto items-center  md:max-w-6xl  justify-between ">
+            <!-- left__side -->
+            <div>
+                <h1 class="text-primary font-extrabold text-xl md:text-2xl">banquee.</h1>
+            </div>
+            <!-- middle__side -->
+            <div class="hidden md:block">
+                <ul class="flex space-x-6">
+                    <li><a href="#" class="text-sm font-semibold">HOME</a></li>
+                    <li><a href="#" class="text-sm">ABOUT</a></li>
+                    <li><a href="#" class="text-sm">BLOG</a></li>
+                    <li><a href="#" class="text-sm">CONTACT</a></li>
+
+                </ul>
+            </div>
+
+            <!-- right__side -->
+            <div class="">
+
+                <!-- bootom__buttons -->
+                <div class="hidden md:flex justify-start items-end space-x-6">
+                    <a class=" p-2 text-primary rounded-md text-sm font-medium ">LOGIN</a>
+                    <button class="text-white p-3 text-sm bg-primary rounded-full px-6 hover:scale-110 duration-700 transition-all uppercase">Create Account</button>
+                </div>
+                <!-- humberg__menu -->
+                <div class="md:hidden">
+                    <template x-if="!isNavBarOpen">
+
+                        <span @click="isNavBarOpen=!isNavBarOpen"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                            </svg>
+                        </span>
+                    </template>
+                    <template x-if="isNavBarOpen">
+
+                        <span @click="isNavBarOpen=!isNavBarOpen"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+
+                        </span>
+                    </template>
+
+                </div>
+
+
+            </div>
+
+        </div>
+        <!-- mobile memu -->
+        <div class="md:hidden bg-white shadow" x-show="isNavBarOpen" x-transition>
+            <ul>
+                <li><a href="#" class="text-sm">Home</a></li>
+                <li><a href="#" class="text-sm">About</a></li>
+                <li><a href="#" class="text-sm">Blog</a></li>
+                <li><a href="#" class="text-sm">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+
+    <!-- landing page -->
+
+    <div class="md:max-w-7xl md:mx-auto">
+        <!-- flex_container -->
+        <div class="mt-10 p-6  space-y-6  w-full   md:flex md:items-center   md:justify-between  md:p-12 md:mt-16 ">
+            <!-- left__side -->
+            <div class="space-y-5 bg-white md:w-[40%]">
+                <h1 class="font-bold text-5xl md:text-6xl">Banking Starts Here .</h1>
+                <p class="text-sm  md:text-base ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia eius
+                    accusantium fuga repellat recusandae nihil. Sint possimus ea provident, totam obcaecati
+                    voluptatum cupiditate.</p>
+                    <!-- flex__container -->
+                    <div class="flex justify-between text-xs ">
+                        <!-- left__side -->
+                        <div class=" md:text-base">
+                            <p>Instant Transaction</p>
+                            <p>Instant Transaction</p>
+                        </div>
+                        <!-- right__side -->
+                        <div class=" md:text-base">
+
+                            <p>Instant Transaction</p>
+                            <p>Instant Transaction</p>
+
+                        </div>
+                    </div>
+                <!-- bootom__buttons -->
+                <div class="flex justify-start items-end">
+                    <button class="text-white p-3 text-sm bg-primary rounded-full px-6 hover:scale-110 duration-700 transition-all uppercase">Create Account</button>
+                    <a class=" p-2 text-primary rounded-md text-sm font-medium ">Already Have An Account</a>
+                </div>
+            </div>
+            <!-- right__side -->
+            <div class="">
+                <img src="./images/credit-cards.png" alt="">
+            </div>
+
+        </div>
+    
+    </div>
+
+
+    <!-- powerful -->
+    <div class="">
+          <!-- flex_container -->
+          <div class="p-6 md:p-0 space-y-6  w-full md:max-w-7xl md:mx-auto  md:flex md:flex-row-reverse items-center justify-start ">
+            <!-- left__side -->
+            <div class="space-y-5 bg-white md:w-[50%]">
+                <h1 class="font-bold text-4xl md:text-6xl">Powerful Simple Business Banking</h1>
+                <p class="text-sm  md:text-base">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia eius
+                    accusantium fuga repellat recusandae nihil. Sint possimus ea provident, totam obcaecati
+                    voluptatum cupiditate.</p>
+                   
+              
+            </div>
+            <!-- right__side -->
+            <div class="">
+                <img src="./images/pngegg.png" class="w-[80%] md:w-[50%]" alt="">
+            </div>
+
+        </div>
+    </div>
+    
+    <!-- we're here -->
+  
+        <!-- flex_container -->
+        <div class="p-6  md:p-12 space-y-6  md:space-y-2 w-full md:max-w-7xl md:mx-auto  md:flex flex-row items-center justify-between ">
+          <!-- left__side -->
+          <div class="space-y-5 bg-white md:w-[35%]">
+              <h1 class="font-bold text-4xl md:text-6xl">We're here next to your door</h1>
+              <p class="text-sm md:text-base ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia eius
+                  accusantium fuga repellat recusandae nihil. Sint possimus ea provident, totam obcaecati
+                  voluptatum cupiditate.</p>
+              <p class="text-sm  md:text-base ">For any inquiries, don;t hestitate to call</p>            
+          </div>
+          <!-- right__side -->
+          <div class=" md:w-1/2">
+              <img src="./images/pngfind.com-holding-hands-png-136115.png" class="w-[80%] md:w-[60%]" alt="">
+          </div>
+
+      </div>
+  </div>
+
+  <!-- footer -->
+  <div x-data="{year:new Date().getFullYear()}" class="py-4 bg-slate-800 flex flex-col p-4 md:p-10 text-white ">
+    <!-- flex__container -->
+    <div class="flex w-full item-start justify-between md:max-w-5xl md:mx-auto ">
+        <!-- left__side -->
+        <div class="w-[40%]">
+               <!-- left__side -->
+               <div>
+                <h1 class="text-primary font-extrabold text-xl md:text-2xl">banquee.</h1>
+                <p class="text-xs md:text-sm">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo optio molestiae perferendis.</p>
+            </div>
+          
+        </div>
+        <!-- right__side -->
+  
+
+            <div class="">
+                <h1 class=" font-extrabold text-base md:text-2xl">Useful Links</h1>
+                <ul class="flex flex-col ">
+                    <li><a href="#" class="text-xs font-semibold">HOME</a></li>
+                    <li><a href="#" class="text-xs  md:text-sm">ABOUT</a></li>
+                    <li><a href="#" class="text-xs  md:text-sm">BLOG</a></li>
+                    <li><a href="#" class="text-xs  md:text-sm">CONTACT</a></li>
+
+                </ul>
+            </div>
+        </div>
+
+    <div class="text-center flex flex-col border-t border-slate-500 p-4">
+
+        <a href="" class="text-xs md:text-sm">Designed by mugerwa</a> 
+        <a href="" class="text-xs md:text-sm">copy right &copy; <span  x-text="year"></span> </a>
+    </div>
+  </div>
+
+
+
+</body>
+
+</html>
